@@ -62,6 +62,7 @@ ul {
   font-weight: normal;
   margin-bottom: 70px;
   position: relative;
+  text-transform: uppercase;
 }
 .special-intro h2::after {
   position: absolute;
@@ -102,11 +103,30 @@ ul {
   color: #333;
 }
 /* End Components */
+/* Start Scroll */
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  text-decoration: none;
+  background-color: var(--main-color);
+  padding: 8px;
+  border-radius: 3px;
+  z-index: 3;
+}
+.scroll i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+/* End Scroll */
 /* Start header */
 header {
   position: absolute;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
 }
 header .container {
@@ -182,6 +202,7 @@ header nav .icon span:last-child {
 @media (max-width: 767px) {
   header nav ul {
     display: none;
+    transition: 5s;
   }
   header .container {
     margin-top: 30px;
@@ -223,6 +244,7 @@ header .search {
   background-size: cover;
   height: 100vh;
   position: relative;
+  z-index: 3;
 }
 .landing .overlay {
   position: absolute;
@@ -324,7 +346,7 @@ header .search {
 }
 .services .services-content .serv:hover {
   box-shadow: 0 0 2px #0a0a0a;
-  transform: translateZ(15px) scale(1.1);
+  /* transform: translateZ(15px) scale(1.1); */
 }
 @media (max-width: 767px) {
   .services .services-content .serv {
@@ -368,6 +390,8 @@ header .search {
   background-size: cover;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .services .services-content-two::before {
   position: absolute;
@@ -382,8 +406,11 @@ header .search {
   z-index: 2;
 }
 .services-content-two .image {
-  top: 200px;
-  left: 230px;
+  padding-left: 50px;
+}
+.services-content-two .image img {
+  bottom: -150px;
+  position: relative;
 }
 .services .services-content-two .text {
   position: absolute;
@@ -396,7 +423,7 @@ header .search {
   display: flex;
   justify-content: flex-start;
 }
-@media (max-width: 767px) {
+@media (max-width: 830px) {
   .services-content-two .image {
     display: none;
   }
@@ -432,3 +459,86 @@ header .search {
   font-weight: 900;
 }
 /* End Services */
+/* Start Portfolio */
+.Portfolio {
+  margin-top: var(--section-margin);
+  margin-bottom: var(--section-margin);
+}
+.Portfolio .container ul {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+}
+.Portfolio .container ul li {
+  padding: 7px 20px;
+}
+@media (max-width: 767px) {
+  .Portfolio .container ul li {
+    padding: 5px 17px;
+  }
+}
+.Portfolio .container ul .active,
+.Portfolio .container ul li:hover {
+  background-color: var(--main-color);
+  color: #eee;
+}
+.Portfolio .images-container {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Portfolio .images-container .box {
+  flex-basis: 100%;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 767px) {
+  .Portfolio .images-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .Portfolio .images-container .box {
+    flex-basis: 25%;
+  }
+}
+.Portfolio .images-container .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.Portfolio .box:hover img {
+  transform: rotate(4deg) scale(1.1);
+}
+.Portfolio .images-container .box .text {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  left: 0;
+  bottom: -100%;
+  background-color: white;
+  transition: 0.3s;
+}
+.Portfolio .box:hover .text {
+  bottom: 0;
+}
+.Portfolio .box .text h4 {
+  font-weight: normal;
+  /* font-size: 19px; */
+  margin-bottom: 10px;
+}
+.Portfolio .box .text p {
+  color: var(--main-color);
+}
+.Portfolio .more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.Portfolio .more a {
+text-decoration: none;
+    color: #eee;
+    background: var(--main-color);
+    padding: 10px;
+    border-radius: 4px;
+}
+/* End Portfolio */
