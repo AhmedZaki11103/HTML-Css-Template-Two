@@ -468,13 +468,16 @@ header .search {
   display: flex;
   justify-content: center;
   gap: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .Portfolio .container ul li {
   padding: 7px 20px;
 }
 @media (max-width: 767px) {
   .Portfolio .container ul li {
-    padding: 5px 17px;
+    padding: 5px 15px;
+    font-size: 15px;
   }
 }
 .Portfolio .container ul .active,
@@ -535,10 +538,10 @@ header .search {
   margin-top: 40px;
 }
 .Portfolio .more a {
-text-decoration: none;
-    color: #eee;
-    background: var(--main-color);
-    padding: 10px;
-    border-radius: 4px;
+  text-decoration: none;
+  color: #eee;
+  background: var(--main-color);
+  padding: 10px;
+  border-radius: 4px;
 }
 /* End Portfolio */
