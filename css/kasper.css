@@ -202,7 +202,6 @@ header nav .icon span:last-child {
 @media (max-width: 767px) {
   header nav ul {
     display: none;
-    transition: 5s;
   }
   header .container {
     margin-top: 30px;
@@ -211,14 +210,15 @@ header nav .icon span:last-child {
   header nav .icon {
     margin-right: -20px;
   }
-  header nav .icon:hover + ul {
+  header nav .icon:hover + ul,
+  header nav ul:hover{ 
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgb(0, 0, 0, 60%);
+    background-color: rgb(0, 0, 0, 70%);
   }
   header nav ul li a {
     padding: 15px;
@@ -541,7 +541,64 @@ header .search {
   text-decoration: none;
   color: #eee;
   background: var(--main-color);
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 4px;
 }
 /* End Portfolio */
+
+/* Start Video  */
+.video {
+  margin-top: var(--section-margin);
+  margin-bottom: var(--section-margin);
+  position: relative;
+}
+.video video {
+  max-width: 100%;
+}
+.video .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: var(--transparent-color);
+  padding: 20px;
+  color: #eee;
+  width: 100%;
+}
+.video .text h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.video .text button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  text-transform: uppercase;
+}
+/* End Video  */
+/* Start About */
+.about {
+  margin-top: var(--section-margin);
+  /* margin-bottom: var(--section-margin); */
+  text-align: center;
+}
+.about .container {
+  position: relative;
+  overflow: hidden;
+}
+.about img {
+  max-width: 100%;
+  margin-bottom: -120px;
+}
+@media (max-width: 520px) {
+  .about img {
+    max-width: 100%;
+    margin-bottom: -70px;
+  }
+}
+/* End About */
