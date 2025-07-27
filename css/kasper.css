@@ -211,7 +211,7 @@ header nav .icon span:last-child {
     margin-right: -20px;
   }
   header nav .icon:hover + ul,
-  header nav ul:hover{ 
+  header nav ul:hover {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -602,3 +602,66 @@ header .search {
   }
 }
 /* End About */
+
+/* Start Stats */
+.stats {
+  /* margin-bottom: var(--section-margin); */
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  position: relative;
+}
+.stats::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 80%);
+}
+.stats .container {
+  display: flex;
+  flex-wrap: wrap;
+  color: #eee;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .stats .container .stat {
+    flex-basis: 100%;
+  }
+.stats .container .stat:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+}
+@media (min-width: 767px) {
+  .stats .container .stat {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .stats .container .stat {
+    flex-basis: 25%;
+  }
+}
+.stats .container .stat {
+  padding: 50px;
+  text-align: center;
+  background-color: var(--transparent-color);
+}
+.stats .container .stat i {
+  background-color: #000;
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+.stats .container .stat h2 {
+  font-size: 45px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+.stats .container .stat p {
+  font-size: 14px;
+}
+/* End States */
