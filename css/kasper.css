@@ -879,6 +879,7 @@ header .search {
   text-align: center;
   border: 1px solid;
   border-color: var(--main-color) transparent transparent;
+  box-shadow: 0 0 11px #333;
 }
 
 .pricing .plans .plan .head h3 {
