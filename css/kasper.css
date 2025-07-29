@@ -856,7 +856,7 @@ header .search {
 }
 @media (max-width: 767px) {
   .quote .container p:first-child {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 .quote .container p:last-child {
@@ -879,7 +879,7 @@ header .search {
   text-align: center;
   border: 1px solid;
   border-color: var(--main-color) transparent transparent;
-  box-shadow: 0 0 3px #333;
+  box-shadow: 0 0 1px #333;
 }
 
 .pricing .plans .plan .head h3 {
@@ -938,6 +938,21 @@ header .search {
   color: #eee;
   background: var(--main-color);
   padding: 10px 15px;
+  border-radius: 5px;
+}
+.pricing .contact-text {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: #eee;
+  padding: 15px 30px;
+  text-decoration: none;
   border-radius: 5px;
 }
 /* End Pricing */
