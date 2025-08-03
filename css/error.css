@@ -1,9 +1,22 @@
 body {
-  background-image: url(../images/quote2.jpg);
-  background-size: cover;
   text-align: center;
+  background-color: #000101;
 }
-body::before {
+.error {
+  width: 100%;
+  background-image: url(../images/error.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-items: center;
+  align-items: center;
+}
+.error::before {
   position: absolute;
   content: "";
   left: 0;
@@ -13,10 +26,8 @@ body::before {
   background-color: rgb(0, 0, 0, 60%);
 }
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-width: 300px;
+  position: relative;
 }
 .container div {
   color: #99876f;
